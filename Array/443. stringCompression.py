@@ -1,0 +1,28 @@
+#
+
+def stringCompression(chars):
+    i = 0
+    size = len(chars)
+    currentIndex = 0
+    while i < size:
+        j = i + 1
+        while j < size and chars[i] == chars[j]:
+            j += 1
+       
+        chars[currentIndex] = chars[i]
+        currentIndex += 1
+        groupsize = j - i
+
+        if groupsize > 1:
+            strArr = [i for i in str(groupsize)]
+
+            for i in strArr:
+                chars[currentIndex] = i
+                currentIndex += 1
+        i = j
+    return currentIndex
+
+
+chars = ["a","a","b","b","b","c","d","d"]
+print(stringCompression(chars))
+print(chars)
