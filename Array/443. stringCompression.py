@@ -1,4 +1,7 @@
-#
+#compress string char array where each consecutive occuring character is grouped and replaced with that character and its no. of occurence
+#for only 1 occurence, the letter is unaffected, for more than 9, append each digit as string followed by the character
+
+## needs to be done in place. given the character array
 
 def stringCompression(chars):
     i = 0
