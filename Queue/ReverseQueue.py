@@ -1,6 +1,4 @@
 from queue import Queue
-from collections import deque
-
 
 def rev(q):
     # add code here
